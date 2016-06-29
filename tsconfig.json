@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "watch": true
+    },
+    "exclude": [
+        "node_modules",
+        "client/bower_components"
+    ]
+}
