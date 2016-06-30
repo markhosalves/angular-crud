@@ -5,12 +5,47 @@
     <title>Cadastro de Patrimônio</title>
     <meta charset="UTF-8">
     <script src="bower_components/angular/angular.js" type="text/javascript"></script>
+    <script src="app/bem/bem.controllers.js" type="text/javascript"></script>
     <script src="app/app.module.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
 
-<body data-ng-controller="ListagemController">
-    <h1>Server está funcionando...</h1>
-    <img data-ng-src="{{foto.url}}" alt="Imagem Bacen">
+<body data-ng-controller="ListagemController as vm">
+    <div class="container" role="main">
+        <h1>Cadastro de Patrimônio</h1>
+
+        <div class="row">
+
+
+
+            <div class="col-md-2">
+                <form>
+                    <div class="input-group">
+                        <label for="criterio">Busca:</label><input type="text" name="criterio" class="form-control" data-ng-model="criterio" id="criterio" value="" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-10">
+                <div data-ng-repeat="bem in vm.bens | filter:{description:criterio}" class="row" >
+                    <div class="col-md-3">
+
+                        <a href="#" class="thumbnail" >
+                            <img data-ng-src="{{bem.url}}" alt="Imagem Bacen">
+                            <div class="caption">
+                                <h3  data-ng-bind="bem.description" >
+                                    <!--{{bem.description}} no geral utiliza-se angular expression  data-ng-bind não funciona legal-->
+                                    </h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!-- double mustache Angular expression -->
 </body>
 
