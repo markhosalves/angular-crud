@@ -2,7 +2,8 @@
     'use strict';
 
     angular.module('cadpat', [
-        'bemControllers',
+        'ngRoute',
+        'bemControllers'
     ]);
 })(angular);
 
