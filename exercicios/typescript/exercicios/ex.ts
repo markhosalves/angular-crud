@@ -13,10 +13,9 @@
 //     idade?: number;
 // }
 
-
-
 class Humano {
     nomeCompleto: string;
+
     constructor(public primeiroNome: string,
         public ultimoNome: string) {
     }
@@ -26,8 +25,8 @@ class Humano {
 class Estudante extends Humano {
     nomeCompleto: string;
     constructor(primeiroNome, public nomeMeio: string, ultimoNome) {
-        super(primeiroNome,ultimoNome);
-        this.nomeCompleto = this.primeiroNome+' '+this.nomeMeio+' '+this.ultimoNome;
+        super(primeiroNome, ultimoNome);
+        this.nomeCompleto = this.primeiroNome + ' ' + this.nomeMeio + ' ' + this.ultimoNome;
     }
 }
 
