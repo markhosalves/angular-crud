@@ -1,28 +1,12 @@
-<ac-cabecalho texto="Listagem de Bens" >
-    <h3>Listagem dos bens cadastrados de:{{vm.nomePessoa}}</h3>
+<home-bens></home-bens>
+<!--<ac-cabecalho texto="Listagem de Bens">
+    <h3>Lista dos bens cadastrados de: {{vm.nomePessoa}}</h3>
 </ac-cabecalho>
-    
-    <div class="row" >
-        <div class="col-md-2">
-            Busca: <input type="criterio" name="criterio" data-ng-model="criterio" value="">
-            <a href="/bens/incluir" class="btn btn-primary" role="button" >Novo Bem</a>
-        </div>
+<div class="row">-->
+    <!-- Barra Lateral -->
+    <!--<barra-lateral criterio="vm.criterio"></barra-lateral>-->
 
-        <div  class="col-md-10" >
-            <div data-ng-repeat="bem in vm.bens" class="row" >
-              <div class="col-md-3" >  
-                <a href="/bens/{{bem._id}}" class="thumbnail">
-                    <img src="{{bem.urlFoto}}" alt="{{bem.descricao}}">
-                <div class="caption">
-                    <h3 data-ng-bind="bem.descricao" ></h3>
-                </div>
-                </a>
-                <a data-ng-href="{{'bens/alterar/'+ bem._id}}" class="btn btn-primary" role="button">Alterar</a>
-             
-             <button type="button" data-ng-click="vm.excluir(bem._id)" class="btn btn-default">Excluir</button>
-             
-           
-           </div>
-            </div>
-        </div>
-    </div>
+    <!-- Conteúdo -->
+    <!--<lista-bens bens="vm.bens" criterio="vm.criterio" on-excluir="vm.excluir(bemId)">
+    </lista-bens>
+</div>-->

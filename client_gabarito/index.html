@@ -18,6 +18,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
 
     <!-- angular ui-bootstrap -->
     <link href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet">
@@ -25,6 +26,8 @@
 
     <script src="app_ts/app.module.js"></script>
     <script src="app_ts/app.config.js"></script>
+    <script src="app_ts/app.filters.js"></script>
+    <script src="app_ts/app.services.js"></script>
     <script src="app_ts/bem/bem.controllers.js"></script>
     <script src="app_ts/directives/ac-cabecalho.directive.js"></script>
     <script src="app_ts/directives/ac-bt-atencao.directive.js"></script>
@@ -32,8 +35,11 @@
     <script src="app_ts/components/barra-lateral.component.js"></script>
     <script src="app_ts/components/lista-bens.component.js"></script>
     <script src="app_ts/components/home-bens.component.js"></script>
+
+    <!--
     <script src="app_ts/alerta/alerta.controllers.js"></script>
     <script src="app_ts/alerta/alerta.services.js"></script>
+    -->
 
     <link href="styles/app.css" rel="stylesheet">
 
@@ -41,13 +47,15 @@
 
 <body>
     <div class="container">
+        <!--
         <div ng-controller="AlertaController as vm">
-            <uib-alert  ng-repeat="alerta in vm.alertas" 
-                        type="{{alerta.tipo}}" 
+            <uib-alert  ng-repeat="alerta in vm.alertas"
+                        type="{{alerta.tipo}}"
                         close="vm.fecharAlerta($index)">
                 {{alerta.msg}}
             </uib-alert>
         </div>
+        -->
         <div ng-view></div>
     </div>
 </body>
