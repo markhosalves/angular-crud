@@ -18,8 +18,14 @@
     -->
     <div class="row top-buffer">
         <uib-accordion>
-            <uib-accordion-group heading="Bem ID: {{bem._id}}"
-                ng-repeat="bem in vm.bens | filter:vm.criterio">
+            <uib-accordion-group 
+                ng-repeat="bem in vm.bens | filter:vm.criterio"   is-open="status.open" >
+     <uib-accordion-heading>
+        Bem ID: {{bem._id}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}" ></i>
+      </uib-accordion-heading>
+
+
+
                 <div class="col-md-12">
                     <a href="/bens/{{bem._id}}">
                         <img ng-src="{{bem.urlFoto}}" style="height:300px; margin:0 auto;">
@@ -54,5 +60,18 @@
                 </div>
             </uib-accordion-group>
         </uib-accordion>
+<uib-carousel active="active"  no-wrap="noWrapSlides">
+      <uib-slide     ng-repeat="bem in vm.bens" index="$index">
+        <img ng-src="{{bem.urlFoto}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{bem._id}}</h4>
+          <p>{{bem.descricao}}</p>
+</div>
+</uib-slide>
+</uib-carousel>
     </div>
 </div>
+
+
+
+

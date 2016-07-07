@@ -4,7 +4,10 @@ var cadpat;
     angular.module('cadpat', [
         'ngRoute',
         'cadpatFilters',
+        'ui.bootstrap',
+        'alertaControllers',
+        'alertaServices',
         'cadpatServices',
-        'bemControllers'
+        'bemControllers',
     ]);
 })(cadpat || (cadpat = {}));

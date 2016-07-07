@@ -10,6 +10,13 @@ namespace cadpat.alerta {
 
     export class AlertaService {
         alertas: IAlerta[] = [];
+
+        add(tipo: TipoAlerta, msg: string) {
+            this.alertas.push({
+                tipo: tipo,
+                msg: msg
+            });
+        }
     }
 
     angular
