@@ -1,0 +1,33 @@
+angularjs dirty checking
+
+
+filtro
+
+IIFE
+
+
+função anonima
+
+(function() {
+	'use strinct';
+	var nome = 'Joao';
+})();
+
+garanto que variaveis sejam declaradas dentro fiquem presas ao escopo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
