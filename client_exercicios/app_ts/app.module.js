@@ -3,11 +3,11 @@ var cadpat;
     'use strict';
     angular.module('cadpat', [
         'ngRoute',
-        'cadpatFilters',
         'ui.bootstrap',
+        'cadpatFilters',
+        'cadpatServices',
         'alertaControllers',
         'alertaServices',
-        'cadpatServices',
-        'bemControllers',
+        'bemControllers'
     ]);
 })(cadpat || (cadpat = {}));

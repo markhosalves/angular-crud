@@ -5,18 +5,18 @@ namespace cadpat {
     }
 
     export interface IBemResourceClass extends
-        ng.resource.IResourceClass<IBemResource> {
+            ng.resource.IResourceClass<IBemResource> {
 
         update(params: Object,
             IBem: cadpat.bem.IBem,
             success: Function,
-            error?: Function); //estava retornando um objeto: cadpat.bem.IBem; no nosso caso não retorna nada na msg
+            error?: Function): cadpat.bem.IBem;
     }
 
     BemResource.$inject = ['$resource'];
-    function BemResource($resource: ng.resource.IResourceService):
-        IBemResourceClass {
-        return <IBemResourceClass>$resource('/api/v1/bens/:id', null, {
+    function BemResource ($resource: ng.resource.IResourceService):
+            IBemResourceClass {
+        return <IBemResourceClass> $resource('/api/v1/bens/:id', null, {
             update: {
                 method: 'PUT'
             }

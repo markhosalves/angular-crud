@@ -1,7 +1,7 @@
 namespace cadpat.alerta {
     'use strict';
 
-    export type TipoAlerta = 'danger' | 'success';
+    type TipoAlerta = 'danger' | 'success';
 
     export interface IAlerta {
         tipo: TipoAlerta;
